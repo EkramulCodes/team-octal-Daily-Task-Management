@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team OCTAL | Data Entry</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>Team</h1>
+        <div><img src="assets/logo.png" alt="octal_logo"></div>
+        <p>Daily Task Management Portal</p>
+    </div>
+
+    <a href="analytics.html" class="nav-btn">📊 View OCTAL Analytics Report</a>
+
+    <form id="octalSyncForm">
+        <div class="form-group"><label>Date</label><input type="date" id="date" required></div>
+        <div class="form-group"><label>Day Topic</label><input type="text" id="topic" placeholder="Enter topic" required></div>
+        <div class="form-group"><label>Task Details</label><textarea id="task" rows="2" placeholder="Task description..." required></textarea></div>
+        
+        <div class="row">
+            <div class="form-group"><label>WhatsApp</label><input type="text" id="whatsapp" placeholder="Number" required></div>
+            <div class="form-group">
+                <label>Member Name</label>
+                <select id="name" required>
+                    <option value="">-- Select --</option>
+                    <option value="Ekramul">Ekramul</option>
+                    <option value="Himaloy">Himaloy</option>
+                    <option value="Suborna">Suborna</option>
+                    <option value="Shimu">Shimu</option>
+                    <option value="Mehedi">Mehedi</option>
+                    <option value="Atia">Atia</option>
+                    <option value="Nirob">Nirob</option>
+                    <option value="Areeba">Areeba</option>
+                </select>
+            </div>
+        </div>
+        <input type="hidden" id="remark" value="N/A">
+        <input type="hidden" id="address" value="N/A">
+        <button type="submit" id="submitBtn">Sync Data to Sheet</button>
+    </form>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

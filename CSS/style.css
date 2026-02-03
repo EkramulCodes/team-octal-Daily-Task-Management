@@ -1,0 +1,213 @@
+/* --- OCTAL System Theme Variables --- */
+:root {
+    --bg: #0d1117;
+    --card: #161b22;
+    --accent: #00f2ff;
+    --text: #c9d1d9;
+    --border: #30363d;
+    --success: #4ade80;
+    --error: #ff4d4d;
+}
+
+/* --- Base Resets --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* --- Layout Container --- */
+.container {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 25px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 550px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.header h1 {
+    font-size: 24px;
+    margin-top: 5px;
+}
+
+/* --- Navigation & Buttons --- */
+.nav-btn {
+    display: block;
+    text-align: center;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 20px;
+    transition: 0.3s ease;
+}
+
+.nav-btn:hover {
+    background: var(--accent);
+    color: #000;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: var(--accent);
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    filter: brightness(1.1);
+}
+
+button:disabled {
+    background: #30363d;
+    color: #8b949e;
+    cursor: not-allowed;
+}
+
+/* --- Form Elements --- */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 13px;
+    color: var(--accent);
+    font-weight: 600;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    background: #0d1117;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: white;
+    font-size: 14px;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    align-items: end;
+}
+
+/* --- Analytics Stats Grid --- */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.stat-box {
+    background: #0d1117;
+    padding: 15px 10px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid var(--border);
+}
+
+.stat-box span {
+    display: block;
+    font-size: 10px;
+    color: #8b949e;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.stat-box h3 {
+    font-size: 22px;
+    margin: 0;
+}
+
+/* --- Charts & Visuals --- */
+.chart-container {
+    margin: 25px 0;
+    background: #0d1117;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    min-height: 200px;
+}
+
+.progress-section {
+    margin-bottom: 20px;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-bottom: 8px;
+    color: #8b949e;
+}
+
+.progress-bar {
+    background: #30363d;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar div {
+    background: var(--accent);
+    height: 100%;
+    width: 0%;
+    transition: width 1s ease-in-out;
+}
+
+/* --- Utility Classes --- */
+.back-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    .row {
+        grid-template-columns: 1fr;
+    }
+}

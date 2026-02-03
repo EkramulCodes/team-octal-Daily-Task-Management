@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCTAL | Performance Analytics</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <a href="index.html" class="back-link">← Back to Input Form</a>
+        <h1>📊 Performance Report</h1>
+    </div>
+
+    <div class="search-section">
+        <div class="row">
+            <select id="searchName">
+                <option value="">-- Select Member --</option>
+                <option value="Ekramul">Ekramul</option>
+                <option value="Himaloy">Himaloy</option>
+                <option value="Suborna">Suborna</option>
+                <option value="Shimu">Shimu</option>
+                <option value="Mehedi">Mehedi</option>
+                <option value="Atia">Atia</option>
+                <option value="Nirob">Nirob</option>
+                <option value="Areeba">Areeba</option>
+            </select>
+            <button onclick="generateVisualReport()" id="searchBtn">Generate Report</button>
+        </div>
+    </div>
+
+    <div id="reportContainer" style="display: none; margin-top: 30px;">
+        <div class="report-card">
+            <h2 id="dispName" style="color: var(--accent); margin: 0;">Member Name</h2>
+            <p id="dispDate" style="font-size: 13px; color: #8b949e; margin-bottom: 20px;">Last Submitted: --</p>
+            
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span>Completed</span>
+                    <h3 id="statDone">0</h3>
+                </div>
+                <div class="stat-box">
+                    <span>Due</span>
+                    <h3 id="statDue" style="color: #ff4d4d;">0</h3>
+                </div>
+                <div class="stat-box">
+                    <span>Days Active</span>
+                    <h3 id="statDays" style="color: var(--accent);">0</h3>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="taskChart"></canvas>
+            </div>
+
+            <div class="progress-section">
+                <div class="progress-label">
+                    <span>Timeline Performance</span>
+                    <span id="indivPerc">0%</span>
+                </div>
+                <div class="progress-bar"><div id="indivBar" style="width: 0%"></div></div>
+            </div>
+
+            <div class="progress-section">
+                <div class="progress-label">
+                    <span>Team Contribution</span>
+                    <span id="overallPerc">0%</span>
+                </div>
+                <div class="progress-bar"><div id="overallBar" style="width: 0%; background: #4ade80;"></div></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
